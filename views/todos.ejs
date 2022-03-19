@@ -1,0 +1,29 @@
+<div class="container flex flex-wrap gap-4 my-10">
+    <% todos.map(todo => { %>
+
+    <div
+        class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative grow shrink"
+    >
+        <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+            <%= todo.title %>
+        </h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+            <%= todo.desc %>
+        </p>
+        <a
+            href="/updateTodo/<%= todo.id %>"
+            class="absolute right-8 top-2 text-blue-500 text-lg"
+        >
+            <i class="bx bxs-edit-alt text-xl"></i>
+        </a>
+        <a
+            href="/deleteTodo/<%= todo.id %>"
+            class="absolute right-2 top-2 text-red-700 text-lg"
+            ><i class="bx bxs-trash-alt text-xl"></i
+        ></a>
+    </div>
+
+    <% })%>
+</div>
