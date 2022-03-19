@@ -1,5 +1,6 @@
 {
     "version": 2,
+    Origin Control: Off,
     "builds": [
         {
             "src": "./app.js",
