@@ -1,7 +1,7 @@
 {
     "version": 2,
     "Origin Control": "Off",
-    {"cache-control": "s-maxage=0"},
+
     "builds": [
         {
             "src": "./app.js",
@@ -9,6 +9,11 @@
         }
     ],
     "routes": [
+        {
+            "src": "/",
+            "headers": { "cache-control": "s-maxage=0" },
+            "dest": "./views/index.ejs"
+        },
         {
             "src": "/(.*)",
             "dest": "/"
