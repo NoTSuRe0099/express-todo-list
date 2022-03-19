@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "Origin Control": Off,
+    "Origin Control": "Off",
     "builds": [
         {
             "src": "./app.js",
